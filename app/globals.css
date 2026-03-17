@@ -2,16 +2,18 @@
 
 @theme {
   --color-background: #ffffff;
-  --color-foreground: #1c1c1c;
-  --color-surface: #f9f9f8;
-  --color-surface-dark: #f0eff0;
-  --color-accent: #d86846; /* Warm amber/terracotta signal */
-  --color-charcoal: #121212; /* Dark sections */
-  --color-blue-cool: #2b5c77;
-  --color-green-botanical: #3a7a5a;
+  --color-foreground: #111111;
+  --color-surface: #f9f9f9;
+  --color-surface-dark: #f0f0f0;
+  
+  /* bio4 exact palette borders and accents */
+  --color-border: #e5e5e5;
+  --color-red-bio: #dc4844;
+  --color-blue-bio: #205c86;
+  --color-amber-bio: #e5ab46;
+  --color-green-bio: #3e8d5f;
   
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 

@@ -1,72 +1,74 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navLinks = [
   { label: "Method", href: "#" },
   { label: "Science", href: "#" },
   { label: "Journal", href: "#" },
-  { label: "Join Waitlist", href: "#waitlist", highlight: true },
+  { label: "Contact Us", href: "#waitlist", highlight: true },
 ];
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
-    <nav className={`fixed left-0 right-0 top-0 z-50 transition-colors duration-300 ${scrolled ? 'bg-charcoal/95 backdrop-blur-md border-b border-surface-dark/10' : 'bg-transparent'}`}>
-      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 lg:px-12">
-        <Link href="/" className="flex items-center gap-1 group">
-          <span className="text-xl font-serif text-white tracking-tight group-hover:opacity-80 transition-opacity">Bio</span>
-          <span className="text-xl font-serif text-accent tracking-tight group-hover:opacity-80 transition-opacity italic">Signal</span>
+    <nav className="fixed left-0 right-0 top-0 z-50 bg-background border-b border-border">
+      <div className="mx-auto flex h-20 w-full items-center justify-between px-6 lg:px-12">
+        <Link href="/" className="flex items-baseline gap-0.5 group">
+          <span className="text-xl italic text-foreground tracking-tight" style={{ fontFamily: 'var(--font-ibm-plex)' }}>biosignal</span>
+          <span className="text-[10px] font-medium text-foreground/60 tracking-widest uppercase ml-0.5" style={{ fontFamily: 'var(--font-ibm-plex)' }}>AI</span>
         </Link>
 
-        <div className="hidden lg:flex items-center gap-10">
+        {/* Desktop Links */}
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
               className={`text-sm font-sans transition-colors ${
                 link.highlight
-                  ? "bg-white text-charcoal px-6 py-3 rounded-full font-medium hover-lift"
-                  : "text-white/70 hover:text-white"
+                  ? "text-foreground hover:text-foreground/70 flex items-center gap-1"
+                  : "text-foreground/80 hover:text-foreground"
               }`}
             >
               {link.label}
+              {link.highlight && (
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              )}
             </Link>
           ))}
         </div>
 
+        {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 text-white"
+          className="lg:hidden p-2 text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
         </button>
       </div>
 
+      {/* Mobile Menu Dropdown */}
       {mobileOpen && (
-        <div className="lg:hidden bg-charcoal border-b border-surface-dark/10 px-6 py-6 absolute top-24 left-0 right-0 shadow-xl">
+        <div className="lg:hidden bg-background border-b border-border px-6 py-4 absolute top-20 left-0 right-0 shadow-sm">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className={`block py-4 text-sm font-sans ${
-                link.highlight ? "text-accent font-medium mt-4" : "text-white/80"
-              }`}
+              className={`flex items-center justify-between py-4 text-sm font-sans text-foreground/80`}
               onClick={() => setMobileOpen(false)}
             >
-              {link.label}
+              <span>{link.label}</span>
+              {link.highlight && (
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              )}
             </Link>
           ))}
         </div>
