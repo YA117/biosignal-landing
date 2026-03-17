@@ -1,144 +1,91 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-const footerLinks = {
-  shop: [
-    { label: "All Products", href: "#products" },
-    { label: "Cleanse", href: "#products" },
-    { label: "Treat", href: "#products" },
-    { label: "Protect", href: "#products" },
-  ],
-  learn: [
-    { label: "Our Story", href: "#about" },
-    { label: "Ingredients", href: "#science" },
-    { label: "The Science", href: "#science" },
-    { label: "Skin Quiz", href: "#" },
-  ],
-  support: [
-    { label: "Contact", href: "#" },
-    { label: "FAQs", href: "#" },
-    { label: "Shipping", href: "#" },
-    { label: "Returns", href: "#" },
-  ],
-};
+const footerLinks = [
+  { label: "Method", href: "#method" },
+  { label: "Science", href: "#science" },
+  { label: "Journal", href: "#" },
+  { label: "Contact", href: "#" },
+];
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#1a1a1a]">
+    <footer className="w-full bg-[#1c1917]">
       {/* Main Footer */}
       <div className="px-6 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-12">
-            {/* Brand Column */}
-            <div className="lg:col-span-4">
-              <h3 className="text-lg font-light text-white">
-                Your Best Skin
-                <br />
-                Starts Here
-              </h3>
-              
-              {/* Newsletter */}
-              <div className="mt-6">
-                <div className="flex max-w-xs">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 rounded-l-full border border-white/20 bg-transparent px-4 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#c9a962]"
-                  />
-                  <button className="rounded-r-full bg-[#c9a962] px-4 py-2.5 text-[#1a1a1a] transition-colors hover:bg-[#d4b978]">
-                    <ArrowRightIcon className="h-4 w-4" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div className="mt-6 flex gap-3">
-                {["IG", "TW", "YT"].map((social) => (
-                  <a
-                    key={social}
-                    href="#"
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-xs text-white/60 transition-all hover:border-[#c9a962] hover:text-[#c9a962]"
-                  >
-                    {social}
-                  </a>
-                ))}
-              </div>
+          <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between">
+            {/* Brand */}
+            <div className="max-w-xs">
+              <Link href="/" className="flex items-baseline gap-0.5">
+                <span className="text-xl font-light text-white">Bio</span>
+                <span className="text-xl font-normal text-[#c4733b]">
+                  Signal
+                </span>
+              </Link>
+              <p className="mt-4 text-sm leading-relaxed text-white/30">
+                Signal-based health, starting with skin.
+              </p>
             </div>
 
-            {/* Links Columns */}
-            <div className="grid grid-cols-3 gap-8 lg:col-span-8">
-              <div>
-                <h4 className="text-xs font-medium uppercase tracking-wider text-white/60">Shop</h4>
-                <ul className="mt-4 space-y-2">
-                  {footerLinks.shop.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-white/50 transition-colors hover:text-[#c9a962]"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Nav Links */}
+            <div className="flex flex-wrap gap-8">
+              {footerLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm text-white/40 transition-colors hover:text-white/70"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
 
-              <div>
-                <h4 className="text-xs font-medium uppercase tracking-wider text-white/60">Learn</h4>
-                <ul className="mt-4 space-y-2">
-                  {footerLinks.learn.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-white/50 transition-colors hover:text-[#c9a962]"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-xs font-medium uppercase tracking-wider text-white/60">Support</h4>
-                <ul className="mt-4 space-y-2">
-                  {footerLinks.support.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-white/50 transition-colors hover:text-[#c9a962]"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Social */}
+            <div className="flex gap-3">
+              {["IG", "X"].map((social) => (
+                <a
+                  key={social}
+                  href="#"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-xs text-white/40 transition-all hover:border-white/30 hover:text-white/60"
+                >
+                  {social}
+                </a>
+              ))}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Large Logo */}
-      <div className="border-t border-white/10 px-6 py-12 sm:px-12 lg:px-24">
+      {/* Large Brand Name */}
+      <div className="border-t border-white/5 px-6 py-12 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-center text-7xl font-light tracking-tight text-white sm:text-8xl md:text-9xl">
-            Lumière
+          <h2 className="text-center text-6xl font-light tracking-tight text-white/5 sm:text-7xl md:text-8xl lg:text-9xl">
+            BioSignal
           </h2>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10 px-6 py-4 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-7xl flex flex-col items-center justify-between gap-2 sm:flex-row">
-          <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} Lumière Skin
+      <div className="border-t border-white/5 px-6 py-4 sm:px-12 lg:px-24">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 sm:flex-row">
+          <p className="text-xs text-white/20">
+            &copy; {new Date().getFullYear()} BioSignal. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="text-xs text-white/40 hover:text-white/60">Privacy</Link>
-            <Link href="#" className="text-xs text-white/40 hover:text-white/60">Terms</Link>
+            <Link
+              href="#"
+              className="text-xs text-white/20 hover:text-white/40"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="#"
+              className="text-xs text-white/20 hover:text-white/40"
+            >
+              Terms
+            </Link>
           </div>
         </div>
       </div>
