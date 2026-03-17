@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/navbar";
+import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { Reframe } from "@/components/sections/Reframe";
 import { ThreeSystems } from "@/components/sections/ThreeSystems";
