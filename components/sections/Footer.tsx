@@ -17,9 +17,8 @@ export function Footer() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           {/* Brand */}
           <div className="max-w-xs">
-            <Link href="/" className="flex items-baseline gap-0.5">
-              <span className="text-xl italic text-foreground tracking-tight" style={{ fontFamily: 'var(--font-ibm-plex)' }}>biosignal</span>
-              <span className="text-[10px] font-medium text-foreground/60 tracking-widest uppercase ml-0.5" style={{ fontFamily: 'var(--font-ibm-plex)' }}>AI</span>
+            <Link href="/">
+              <span className="text-xl font-normal text-foreground tracking-tight" style={{ fontFamily: 'var(--font-ibm-plex)' }}>biosignal</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-foreground/40">
               Signal-based health, starting with skin.

@@ -99,22 +99,7 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Scroll Down Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="flex items-center justify-center gap-2 py-6 border-t border-border cursor-pointer text-foreground/40 hover:text-foreground transition-colors"
-        onClick={() => {
-          window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
-        }}
-      >
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M12 8v8M8 12l4 4 4-4" />
-        </svg>
-        <span className="font-mono text-xs tracking-widest uppercase">Scroll Down</span>
-      </motion.div>
+
     </section>
   );
 }
