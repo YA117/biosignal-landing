@@ -13,49 +13,47 @@ export function WaitlistSection() {
     if (!email) return;
     
     setLoading(true);
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    toast.success("You're on the list! We'll notify you when we launch.");
+    toast.success("You're on the list! We'll be in touch soon.");
     setEmail("");
     setLoading(false);
   };
 
   return (
-    <section id="waitlist" className="w-full bg-[#1a1a1a] py-24 px-6 sm:px-12 lg:px-24">
-      <div className="mx-auto max-w-4xl text-center">
+    <section id="waitlist" className="w-full bg-[#1a1a1a] py-20 px-6 sm:px-12 lg:px-24">
+      <div className="mx-auto max-w-xl text-center">
         <span className="text-xs uppercase tracking-[0.2em] text-[#c9a962]">
           Launching 2025
         </span>
-        <h2 className="mt-4 text-3xl font-light text-white sm:text-4xl md:text-5xl">
-          Join the <span className="font-normal italic">Waitlist</span>
+        <h2 className="mt-4 text-3xl font-light text-white">
+          Join the <span className="italic">Waitlist</span>
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-white/60">
-          Be the first to experience science-backed skincare. Get exclusive early access 
-          and 20% off your first order when we launch.
+        <p className="mt-4 text-sm text-white/50">
+          Be the first to experience science-backed skincare. Get 20% off when we launch.
         </p>
 
-        <form onSubmit={handleSubmit} className="mt-10 flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+        <form onSubmit={handleSubmit} className="mt-8 flex flex-col sm:flex-row gap-3">
           <input
             type="email"
             required
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 rounded-full bg-white/10 border border-white/20 px-6 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-[#c9a962]"
+            className="flex-1 rounded-full bg-white/5 border border-white/10 px-5 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#c9a962]"
           />
           <button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c9a962] px-8 py-4 text-sm font-medium text-[#1a1a1a] transition-colors hover:bg-[#d4b978] disabled:opacity-50"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c9a962] px-6 py-3 text-sm font-medium text-[#1a1a1a] transition-colors hover:bg-[#d4b978] disabled:opacity-50"
           >
-            {loading ? "Joining..." : "Get Early Access"}
+            {loading ? "Joining..." : "Join Waitlist"}
             <ArrowRightIcon className="h-4 w-4" />
           </button>
         </form>
 
-        <p className="mt-6 text-xs text-white/40">
-          No spam, ever. Unsubscribe anytime.
+        <p className="mt-4 text-xs text-white/30">
+          No spam. Unsubscribe anytime.
         </p>
       </div>
     </section>
