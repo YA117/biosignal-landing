@@ -16,7 +16,11 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${mono.variable}`}>
       <body className="font-sans bg-background text-foreground antialiased selection:bg-accent/20 selection:text-accent">
