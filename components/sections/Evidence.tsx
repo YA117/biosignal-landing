@@ -2,55 +2,56 @@
 
 import { motion } from "framer-motion";
 
-export function Evidence() {
-  const stats = [
-    {
-      value: "70%",
-      desc: "of the entire immune system resides in the gut."
-    },
-    {
-      value: "40%",
-      desc: "reduction in skin barrier recovery rate caused by chronic stress."
-    },
-    {
-      value: "Clinical",
-      desc: "Gut-skin axis dysfunction is highly implicated in acne, eczema, and rosacea."
-    }
-  ];
+const evidence = [
+  {
+    stat: "78.72%",
+    description: "By testing every gene across all human tissues using large-scale.",
+  },
+  {
+    stat: "98M",
+    description: "The impact of the Human Genome Project on drug research is becoming increasingly evident.",
+  },
+  {
+    stat: "1.2x",
+    description: "Retrospective analyses have shown that compounds binding to drug targets.",
+  },
+];
 
+export function Evidence() {
   return (
-    <section className="bg-surface text-charcoal py-24 md:py-40 px-6 border-t border-charcoal/5">
-      <div className="container mx-auto max-w-7xl">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-12"
-        >
-          {stats.map((stat, i) => (
-            <div key={i} className="flex flex-col">
-              <span className="font-serif text-6xl md:text-8xl tracking-tight mb-6">{stat.value}</span>
-              <div className="w-12 h-[2px] bg-accent/50 mb-6" />
-              <p className="font-sans text-lg md:text-xl font-light text-charcoal/80 leading-relaxed max-w-sm">
-                {stat.desc}
-              </p>
-            </div>
-          ))}
-        </motion.div>
-        
+    <section id="science" className="bg-background border-t border-border">
+      <div className="w-full px-6 lg:px-12 py-24 md:py-32">
         <motion.div
-           initial={{ opacity: 0 }}
-           whileInView={{ opacity: 1 }}
-           viewport={{ once: true }}
-           transition={{ delay: 0.4, duration: 1 }}
-           className="mt-24 pt-12 border-t border-charcoal/10 flex flex-col items-center text-center max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
         >
-           <div className="flex flex-wrap justify-center gap-6 md:gap-12 opacity-50 mb-8">
-              <span className="font-mono text-xs uppercase tracking-widest">Clinically Informed</span>
-              <span className="font-mono text-xs uppercase tracking-widest">Peer-Reviewed Research</span>
-           </div>
+          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-4">
+            — Evidence
+          </span>
         </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+          {evidence.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className={`py-8 ${i < evidence.length - 1 ? "md:border-r border-border md:pr-10" : ""} ${i > 0 ? "md:pl-10" : ""}`}
+            >
+              <h3 className="text-5xl md:text-6xl font-sans font-normal text-foreground mb-4">
+                {item.stat}
+              </h3>
+              <p className="text-sm text-foreground/50 leading-relaxed">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

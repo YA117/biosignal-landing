@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${ibmPlex.variable} ${mono.variable}`}>
-      <body className="font-sans bg-background text-foreground antialiased selection:bg-accent/20 selection:text-accent">
+      <body className="font-sans bg-background text-foreground antialiased selection:bg-blue-bio/20 selection:text-blue-bio">
         {children}
         <Toaster />
       </body>
