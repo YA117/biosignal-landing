@@ -7,7 +7,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 const navLinks = [
   { label: "Method", href: "#method" },
   { label: "Science", href: "#science" },
-  { label: "Journal", href: "/journal" },
   { label: "Join the Waitlist", href: "#waitlist", highlight: true },
 ];
 

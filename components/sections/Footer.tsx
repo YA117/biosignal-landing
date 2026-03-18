@@ -5,7 +5,6 @@ import Link from "next/link";
 const footerLinks = [
   { label: "Method", href: "#method" },
   { label: "Science", href: "#science" },
-  { label: "Journal", href: "/journal" },
   { label: "Contact", href: "#waitlist" },
 ];
 

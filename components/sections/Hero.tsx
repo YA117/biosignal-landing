@@ -17,45 +17,31 @@ export function Hero() {
     <section className="relative bg-background pt-28 pb-0 overflow-hidden">
       {/* Top Content Area */}
       <div className="w-full px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-          {/* Left: Massive Heading */}
-          <div className="border-r border-border py-16 pr-8 lg:pr-16">
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-8"
-            >
-              A New Framework for Skin Health
-            </motion.span>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-sans font-normal leading-[1.05] tracking-tight text-foreground"
-            >
-              Your skin is{" "}
-              <br className="hidden sm:block" />
-              not the problem.{" "}
-              <br className="hidden sm:block" />
-              It is the signal
-              <span className="text-blue-bio">.</span>
-            </motion.h1>
-          </div>
-
-          {/* Right: Description + CTA */}
-          <div className="py-16 pl-8 lg:pl-16 flex flex-col justify-center">
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-base text-foreground/60 leading-relaxed max-w-md mb-10"
-            >
-              BioSignal is a structured system that decodes what your skin is telling you and resolves it at the source.
-            </motion.p>
-          </div>
+        <div className="py-16">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-8"
+          >
+            A New Framework for Skin Health
+          </motion.span>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-sans font-normal leading-[1.05] tracking-tight text-foreground"
+          >
+            Your skin is{" "}
+            <br className="hidden sm:block" />
+            not the problem.{" "}
+            <br className="hidden sm:block" />
+            It is the signal
+            <span className="text-blue-bio">.</span>
+          </motion.h1>
         </div>
       </div>
+
 
       {/* Horizontal Bar Data Visualization — bio4 style */}
       <div className="w-full mt-4">

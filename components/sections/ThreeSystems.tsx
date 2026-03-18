@@ -80,6 +80,25 @@ export function ThreeSystems() {
                   <path d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               </a>
+              {/* Abstract visualization - Motion based */}
+              <div className="mt-8">
+                <MotionGrid 
+                  rows={10}
+                  cols={6}
+                  bars={[
+                    { row: 1, width: "w-[40%]", left: "left-[10%]", color: system.color, delay: 0.1 },
+                    { row: 2, width: "w-[60%]", left: "left-0", color: system.color, delay: 0.2 },
+                    { row: 3, width: "w-[30%]", left: "left-[45%]", color: system.color, delay: 0.05 },
+                    { row: 4, width: "w-[50%]", left: "left-[20%]", color: system.color, delay: 0.3 },
+                    { row: 5, width: "w-[75%]", left: "left-[5%]", color: system.color, delay: 0.15 },
+                    { row: 6, width: "w-[25%]", left: "left-[60%]", color: system.color, delay: 0.4 },
+                    { row: 7, width: "w-[45%]", left: "left-[15%]", color: system.color, delay: 0.1 },
+                    { row: 8, width: "w-[35%]", left: "left-[40%]", color: system.color, delay: 0.25 },
+                    { row: 9, width: "w-[65%]", left: "left-0", color: system.color, delay: 0.05 },
+                    { row: 10, width: "w-[20%]", left: "left-[75%]", color: system.color, delay: 0.35 },
+                  ]}
+                />
+              </div>
 
             </motion.div>
           ))}
