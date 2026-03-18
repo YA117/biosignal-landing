@@ -38,7 +38,7 @@ export function Product() {
           className="mb-16"
         >
           <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
-            — Introducing
+            — The Product
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
             BioSignal Reset
@@ -75,24 +75,6 @@ export function Product() {
               <p className="text-sm text-foreground/50 leading-relaxed mb-6">
                 {item.description}
               </p>
-
-              {/* Abstract visualization placeholder */}
-              <div className="mt-8 h-48 md:h-64 bg-surface rounded-sm overflow-hidden relative">
-                <div className="absolute inset-0 grid grid-cols-8 grid-rows-8">
-                  {Array.from({ length: 64 }).map((_, j) => (
-                    <div
-                      key={j}
-                      className={`border border-border/30 ${
-                        Math.random() > 0.85
-                          ? item.color + " opacity-60"
-                          : Math.random() > 0.9
-                          ? "bg-surface-dark"
-                          : ""
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>

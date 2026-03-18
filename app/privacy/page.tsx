@@ -88,7 +88,7 @@ export default function PrivacyPage() {
               <h2 className="text-lg font-sans font-normal text-foreground mb-3">8. Contact</h2>
               <p>
                 If you have any questions about this Privacy Policy, please contact us at{" "}
-                <span className="text-foreground">hello@biosignal.co</span>.
+                <span className="text-foreground">hello@BioSignal.co.uk</span>.
               </p>
             </section>
           </div>

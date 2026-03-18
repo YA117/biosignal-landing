@@ -84,7 +84,7 @@ export default function TermsPage() {
               <h2 className="text-lg font-sans font-normal text-foreground mb-3">9. Contact</h2>
               <p>
                 For any questions regarding these Terms, please contact us at{" "}
-                <span className="text-foreground">hello@biosignal.co</span>.
+                <span className="text-foreground">hello@BioSignal.co.uk</span>.
               </p>
             </section>
           </div>

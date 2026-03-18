@@ -53,21 +53,6 @@ export function Hero() {
             >
               BioSignal is a structured system that decodes what your skin is telling you and resolves it at the source.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.45 }}
-            >
-              <Link
-                href="#waitlist"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background text-sm font-medium hover:bg-foreground/90 transition-colors"
-              >
-                Join the Waitlist
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </Link>
-            </motion.div>
           </div>
         </div>
       </div>

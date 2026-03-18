@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { MotionGrid } from "@/components/ui/MotionGrid";
 
 const systems = [
   {
@@ -80,24 +81,6 @@ export function ThreeSystems() {
                 </svg>
               </a>
 
-              {/* Abstract visualization placeholder */}
-              <div className="mt-8 h-48 md:h-64 bg-surface rounded-sm overflow-hidden relative">
-                {/* Grid pattern */}
-                <div className="absolute inset-0 grid grid-cols-8 grid-rows-8">
-                  {Array.from({ length: 64 }).map((_, j) => (
-                    <div
-                      key={j}
-                      className={`border border-border/30 ${
-                        Math.random() > 0.85
-                          ? system.color + " opacity-60"
-                          : Math.random() > 0.9
-                          ? "bg-surface-dark"
-                          : ""
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>

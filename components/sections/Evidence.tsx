@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { MotionGrid } from "@/components/ui/MotionGrid";
 
 const evidence = [
   {
@@ -53,9 +54,31 @@ export function Evidence() {
               <h3 className="text-5xl md:text-6xl font-sans font-normal text-foreground mb-4">
                 {item.stat}
               </h3>
-              <p className="text-sm text-foreground/50 leading-relaxed">
+              <p className="text-sm text-foreground/50 leading-relaxed max-w-[240px] mb-8">
                 {item.description}
               </p>
+              <div className="md:pr-12">
+                <MotionGrid 
+                  rows={2}
+                  cols={4}
+                  bars={[
+                    { 
+                      row: 1, 
+                      width: item.stat.includes("%") ? `w-[${item.stat}]` : "w-[60%]", 
+                      left: "left-0", 
+                      color: i === 0 ? "bg-blue-bio" : i === 1 ? "bg-red-bio" : "bg-green-bio",
+                      delay: 0.2 
+                    },
+                    { 
+                      row: 2, 
+                      width: "w-[20%]", 
+                      left: "left-[70%]", 
+                      color: "bg-surface-dark", 
+                      delay: 0.4 
+                    },
+                  ]}
+                />
+              </div>
             </motion.div>
           ))}
         </div>

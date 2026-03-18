@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { MotionGrid } from "@/components/ui/MotionGrid";
 
 const steps = [
   {
@@ -90,44 +91,27 @@ export function Method() {
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
                 className="w-[360px] md:w-[440px] h-[280px] md:h-[320px] bg-surface rounded-sm border border-border relative overflow-hidden"
               >
-                {/* Abstract node-link diagram */}
-                <svg className="w-full h-full" viewBox="0 0 440 320" fill="none">
-                  {/* Connection lines */}
-                  {Array.from({ length: 12 }).map((_, j) => (
-                    <line
-                      key={`line-${j}`}
-                      x1={40 + Math.random() * 180}
-                      y1={40 + Math.random() * 240}
-                      x2={220 + Math.random() * 180}
-                      y2={40 + Math.random() * 240}
-                      stroke={`var(--color-${color})`}
-                      strokeWidth="1"
-                      opacity="0.3"
-                    />
-                  ))}
-                  {/* Nodes */}
-                  {Array.from({ length: 8 }).map((_, j) => (
-                    <circle
-                      key={`node-${j}`}
-                      cx={60 + Math.random() * 320}
-                      cy={60 + Math.random() * 200}
-                      r={8 + Math.random() * 12}
-                      fill={`var(--color-${color})`}
-                      opacity={0.4 + Math.random() * 0.4}
-                    />
-                  ))}
-                  {/* Inner circles */}
-                  {Array.from({ length: 8 }).map((_, j) => (
-                    <circle
-                      key={`inner-${j}`}
-                      cx={60 + Math.random() * 320}
-                      cy={60 + Math.random() * 200}
-                      r={3 + Math.random() * 5}
-                      fill={`var(--color-${color})`}
-                      opacity="0.8"
-                    />
-                  ))}
-                </svg>
+                {/* Motion Grid Signal Flow */}
+                <div className="p-8 h-full flex flex-col justify-center">
+                  <MotionGrid 
+                    rows={8}
+                    cols={6}
+                    bars={[
+                      { row: 1, width: "w-[30%]", left: "left-[10%]", color: `bg-${color}`, delay: 0.1 },
+                      { row: 2, width: "w-[50%]", left: "left-[40%]", color: `bg-${color}`, delay: 0.2 },
+                      { row: 3, width: "w-[20%]", left: "left-0", color: `bg-${color}`, delay: 0.3 },
+                      { row: 4, width: "w-[40%]", left: "left-[55%]", color: `bg-${color}`, delay: 0.4 },
+                      { row: 5, width: "w-[60%]", left: "left-[15%]", color: `bg-${color}`, delay: 0.5 },
+                      { row: 6, width: "w-[25%]", left: "left-[70%]", color: `bg-${color}`, delay: 0.6 },
+                      { row: 7, width: "w-[35%]", left: "left-[5%]", color: `bg-${color}`, delay: 0.7 },
+                      { row: 8, width: "w-[45%]", left: "left-[30%]", color: `bg-${color}`, delay: 0.8 },
+                    ]}
+                  />
+                  <div className="mt-6 flex justify-between items-end">
+                    <span className={`text-[10px] font-mono uppercase tracking-tighter text-${color} opacity-60`}>Signal: {color.split('-')[0]}</span>
+                    <div className={`w-2 h-2 rounded-full bg-${color} animate-pulse`} />
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
