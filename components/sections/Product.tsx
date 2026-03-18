@@ -14,7 +14,7 @@ const features = [
     stat: "3",
     title: "Targeted micronutrients",
     description:
-      "Zinc picolinate (15mg) \u00b7 Vitamin D3 (1,000 IU) \u00b7 Prebiotic fibre (FOS). Each chosen for its role in skin repair, immune regulation, and probiotic colonisation.",
+      "Zinc picolinate (15mg) · Vitamin D3 (4,000 IU) · Prebiotic fibre (FOS). Each chosen for its role in skin repair, immune regulation, and probiotic colonisation.",
     color: "bg-blue-bio",
   },
   {
@@ -97,9 +97,7 @@ export function Product() {
               </span>
             ))}
           </div>
-          <p className="text-sm text-foreground/60 leading-relaxed">
-            90-day money-back guarantee. If your skin does not improve, you pay nothing. No return required.
-          </p>
+
         </motion.div>
       </div>
     </section>

@@ -70,16 +70,6 @@ export function ThreeSystems() {
                 {system.description}
               </p>
 
-              {/* Learn More Link */}
-              <a
-                href="#"
-                className="inline-flex items-center gap-1 text-sm text-blue-bio hover:underline"
-              >
-                Learn More
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </a>
               {/* Abstract visualization - Motion based */}
               <div className="mt-8">
                 <MotionGrid 
