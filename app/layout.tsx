@@ -1,4 +1,5 @@
 import { Inter, IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
+import { Agentation } from "agentation";
 import { Toaster } from "sonner";
 import "./globals.css";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className="font-sans bg-background text-foreground antialiased selection:bg-blue-bio/20 selection:text-blue-bio">
         {children}
         <Toaster />
+        {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
     </html>
   );
