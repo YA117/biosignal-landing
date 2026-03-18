@@ -5,10 +5,10 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navLinks = [
-  { label: "Method", href: "#" },
-  { label: "Science", href: "#" },
-  { label: "Journal", href: "#" },
-  { label: "Contact Us", href: "#waitlist", highlight: true },
+  { label: "Method", href: "#method" },
+  { label: "Science", href: "#science" },
+  { label: "Journal", href: "/journal" },
+  { label: "Join the Waitlist", href: "#waitlist", highlight: true },
 ];
 
 export function Navbar() {

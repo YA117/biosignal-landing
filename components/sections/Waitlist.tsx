@@ -25,15 +25,12 @@ export function Waitlist() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-8">
-              — Early Access
-            </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground mb-6">
-              Join the waitlist
+              Understand the signal
               <span className="text-blue-bio">.</span>
             </h2>
             <p className="text-base text-foreground/50 leading-relaxed mb-10 max-w-lg">
-              Be among the first to access BioSignal when we launch. We&apos;ll notify you with early access details.
+              BioSignal Reset is launching soon. Join the waitlist for early access, founding member pricing, and the full BioSignal framework, free.
             </p>
 
             {submitted ? (
@@ -57,10 +54,14 @@ export function Waitlist() {
                   type="submit"
                   className="px-6 py-3 bg-foreground text-background text-sm font-medium hover:bg-foreground/90 transition-colors"
                 >
-                  Submit
+                  Join the Waitlist
                 </button>
               </form>
             )}
+
+            <p className="mt-4 text-xs text-foreground/30">
+              No spam. No wellness fluff. Unsubscribe anytime.
+            </p>
           </motion.div>
         </div>
       </div>
