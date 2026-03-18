@@ -7,19 +7,19 @@ const steps = [
     number: "001",
     title: "Interpret",
     description:
-      "Identify which signals your skin is sending and which internal systems are generating them. Breakouts, redness, dryness, and reactivity each carry different biological meaning.",
+      "Identify which signals your skin is sending and which internal systems are generating them. Breakouts, redness, dryness, and reactivity each carry different biological meaning. The first step is pattern recognition, mapping symptoms to their systemic origins rather than treating them in isolation.",
   },
   {
     number: "002",
     title: "Resolve",
     description:
-      "Address the underlying drivers across gut, barrier, and nervous system, in the right sequence. BioSignal addresses all three in a structured order.",
+      "Address the underlying drivers across gut, barrier, and nervous system, in the right sequence. This is where most approaches fail. They pick one system and hope for the best. BioSignal addresses all three in a structured order, because a repaired gut barrier means nothing if the nervous system is still flooding the body with inflammatory signals.",
   },
   {
     number: "003",
     title: "Rebuild",
     description:
-      "Restore long-term resilience so your body maintains clarity on its own. Skin that stays clear not because you are managing it, but because the underlying drivers have been resolved.",
+      "Restore long-term resilience so your body maintains clarity on its own. The goal is not permanent dependence on a system. It is a body that regulates itself. Skin that stays clear not because you are managing it, but because the underlying drivers have been resolved.",
   },
 ];
 
@@ -27,6 +27,25 @@ export function Method() {
   return (
     <section id="method" className="bg-background border-t border-border">
       <div className="w-full px-6 lg:px-12 py-24 md:py-32">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
+            — The Method
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
+            The BioSignal Method
+          </h2>
+          <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
+            Not a product. Not a protocol you follow blindly. A structured framework for understanding what your body is telling you and responding with precision.
+          </p>
+        </motion.div>
+
         {/* Numbered List — bio1 style */}
         <div className="mb-16">
           {steps.map((step, index) => (

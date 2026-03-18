@@ -14,14 +14,14 @@ const systems = [
     stat: "02",
     title: "Gut Health",
     description:
-      "The axis between your gut and your skin is one of the most documented pathways in clinical dermatology. Intestinal permeability, microbiome imbalance, and chronic gut inflammation drive immune responses that surface as skin conditions.",
+      "The axis between your gut and your skin is one of the most documented pathways in clinical dermatology. Intestinal permeability, microbiome imbalance, and chronic gut inflammation drive immune responses that surface as skin conditions. For many people, resolving the gut is the intervention their skin has been waiting for.",
     color: "bg-blue-bio",
   },
   {
     stat: "03",
     title: "Nervous System",
     description:
-      "Chronic stress does not just feel bad. It changes how your body allocates resources. Under sustained cortisol, the body prioritises survival over repair. Calming the nervous system is not a lifestyle suggestion. It is a biological prerequisite for healing.",
+      "Chronic stress does not just feel bad. It changes how your body allocates resources. Under sustained cortisol, the body prioritises survival over repair. Skin cell turnover slows. Inflammation accelerates. Conditions that should resolve in days persist for months. Calming the nervous system is not a lifestyle suggestion. It is a biological prerequisite for healing.",
     color: "bg-green-bio",
   },
 ];
@@ -30,6 +30,25 @@ export function ThreeSystems() {
   return (
     <section className="bg-background border-t border-border">
       <div className="w-full px-6 lg:px-12 py-24 md:py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
+            — The Three Systems
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
+            Three systems.{" "}
+            <span className="text-foreground/40">One signal.</span>
+          </h2>
+          <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
+            Most approaches address skin at the surface. BioSignal works at the level where skin conditions originate: three interconnected systems that determine whether your body heals or stays inflamed.
+          </p>
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {systems.map((system, i) => (
             <motion.div

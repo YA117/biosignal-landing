@@ -37,9 +37,18 @@ export function Product() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-4">
-            — The Product
+          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
+            — Introducing
           </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
+            BioSignal Reset
+          </h2>
+          <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
+            The entry point to the BioSignal Method. A 90-day oral formulation designed to calm the systems that drive chronic skin conditions.
+          </p>
+          <p className="mt-4 text-sm text-foreground/40 leading-relaxed max-w-2xl">
+            Reset is not a generic probiotic. Every strain was selected for published evidence of skin-specific outcomes, not general gut health. Combined with targeted micronutrients that support barrier repair and immune modulation, it addresses all three systems in a single daily capsule.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
@@ -87,6 +96,29 @@ export function Product() {
             </motion.div>
           ))}
         </div>
+
+        {/* Badges & Guarantee */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-12 pt-8 border-t border-border"
+        >
+          <div className="flex flex-wrap gap-3 mb-8">
+            {["Delayed-release vegetarian capsule", "Shelf-stable, no refrigeration", "Third-party tested", "Vegan", "Non-GMO", "Gluten-free", "Dairy-free"].map((badge) => (
+              <span
+                key={badge}
+                className="text-xs text-foreground/40 border border-border px-3 py-1.5"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+          <p className="text-sm text-foreground/60 leading-relaxed">
+            90-day money-back guarantee. If your skin does not improve, you pay nothing. No return required.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
