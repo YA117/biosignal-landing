@@ -8,21 +8,21 @@ const systems = [
     stat: "01",
     title: "Skin Barrier",
     description:
-      "The body\u2019s first line of defence, and the first to be compromised. When the barrier weakens, irritants enter, moisture escapes, and inflammation becomes self-sustaining. Most skincare products address this layer alone. BioSignal starts here but does not stop here.",
+      "The body’s first line of defence, and often the first to show disruption. Barrier breakdown allows irritants to enter, moisture to escape, and inflammation to sustain itself.",
     color: "bg-red-bio",
   },
   {
     stat: "02",
     title: "Gut Health",
     description:
-      "The axis between your gut and your skin is one of the most documented pathways in clinical dermatology. Intestinal permeability, microbiome imbalance, and chronic gut inflammation drive immune responses that surface as skin conditions. For many people, resolving the gut is the intervention their skin has been waiting for.",
+      "The gut plays a central role in regulating immune activity. Microbiome imbalance and intestinal permeability can amplify inflammatory signalling throughout the body, including the skin.",
     color: "bg-blue-bio",
   },
   {
     stat: "03",
     title: "Nervous System",
     description:
-      "Chronic stress does not just feel bad. It changes how your body allocates resources. Under sustained cortisol, the body prioritises survival over repair. Skin cell turnover slows. Inflammation accelerates. Conditions that should resolve in days persist for months. Calming the nervous system is not a lifestyle suggestion. It is a biological prerequisite for healing.",
+      "The nervous system determines whether the body prioritises repair or survival. Under chronic stress, inflammatory pathways remain active and tissue recovery slows.",
     color: "bg-green-bio",
   },
 ];
@@ -46,7 +46,9 @@ export function ThreeSystems() {
             <span className="text-foreground/40">One signal.</span>
           </h2>
           <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
-            Most approaches address skin at the surface. BioSignal works at the level where skin conditions originate: three interconnected systems that determine whether your body heals or stays inflamed.
+            Skin reflects internal regulation. What appears on the surface is shaped by deeper biological systems that determine whether the body heals or remains inflamed.
+            <br /><br />
+            BioSignal focuses on three primary drivers.
           </p>
         </motion.div>
 

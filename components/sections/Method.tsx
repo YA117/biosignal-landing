@@ -8,19 +8,19 @@ const steps = [
     number: "001",
     title: "Interpret",
     description:
-      "Identify which signals your skin is sending and which internal systems are generating them. Breakouts, redness, dryness, and reactivity each carry different biological meaning. The first step is pattern recognition, mapping symptoms to their systemic origins rather than treating them in isolation.",
+      "Identify which signals are present and which systems are driving them. Patterns matter. Frequency matter. Context matters. The objective is not symptom suppression. It is system mapping.",
   },
   {
     number: "002",
     title: "Resolve",
     description:
-      "Address the underlying drivers across gut, barrier, and nervous system, in the right sequence. This is where most approaches fail. They pick one system and hope for the best. BioSignal addresses all three in a structured order, because a repaired gut barrier means nothing if the nervous system is still flooding the body with inflammatory signals.",
+      "Address the underlying drivers across systems, in the correct sequence. Most interventions target one pathway at a time. BioSignal works across systems because biological regulation is interconnected.",
   },
   {
     number: "003",
     title: "Rebuild",
     description:
-      "Restore long-term resilience so your body maintains clarity on its own. The goal is not permanent dependence on a system. It is a body that regulates itself. Skin that stays clear not because you are managing it, but because the underlying drivers have been resolved.",
+      "Restore resilience so the body can regulate without ongoing intervention. The goal is not permanent management. It is regained stability.",
   },
 ];
 
@@ -43,7 +43,7 @@ export function Method() {
             The BioSignal Method
           </h2>
           <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
-            Not a product. Not a protocol you follow blindly. A structured framework for understanding what your body is telling you and responding with precision.
+            A structured approach to interpreting biological signals and responding with precision. Not a single product. Not a generic protocol. A system for understanding what your body is doing, and changing its trajectory.
           </p>
         </motion.div>
 

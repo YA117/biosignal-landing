@@ -6,15 +6,15 @@ import { MotionGrid } from "@/components/ui/MotionGrid";
 const evidence = [
   {
     stat: "70%",
-    description: "of the immune system resides in the gut, making intestinal health a direct lever for inflammatory skin conditions.",
+    description: "Around 70% of immune activity is associated with the gut, making intestinal health a direct influence on inflammatory signalling.",
   },
   {
     stat: "40%",
-    description: "reduction in skin barrier recovery is observed under chronic psychological stress, according to published dermatological research.",
+    description: "Chronic psychological stress can significantly slow skin barrier recovery, prolonging visible symptoms.",
   },
   {
     stat: "34",
-    description: "peer-reviewed studies have documented the gut-skin axis as a significant factor in acne, eczema, rosacea, and psoriasis outcomes.",
+    description: "Multiple peer-reviewed studies describe the gut–skin axis as a meaningful factor in acne, eczema, rosacea, and psoriasis outcomes.",
   },
 ];
 
@@ -33,11 +33,11 @@ export function Evidence() {
             The Science
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
-            Built on research.{" "}
-            <span className="text-foreground/40">Not trends.</span>
+            Built on established research,{" "}
+            <span className="text-foreground/40">not trends.</span>
           </h2>
           <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl text-balance">
-            BioSignal&apos;s framework is grounded in peer-reviewed clinical research across dermatology, gastroenterology, and psychoneuroimmunology. These are not new discoveries. They are well-established connections that the skincare industry has largely ignored.
+            BioSignal integrates clinical insights from dermatology, gastroenterology, and psychoneuroimmunology, disciplines that study how biological systems interact. These connections are well documented. They are rarely applied in a coordinated way.
           </p>
         </motion.div>
 
@@ -85,7 +85,7 @@ export function Evidence() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-12 text-sm text-foreground/40 leading-relaxed max-w-2xl"
         >
-          Every element of the BioSignal framework is informed by clinical evidence. Where the research is strong, we build on it. Where it is emerging, we say so.
+          Where evidence is strong, BioSignal builds on it. Where evidence is emerging, it is presented transparently.
         </motion.p>
       </div>
     </section>

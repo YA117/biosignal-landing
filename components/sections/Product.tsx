@@ -4,24 +4,24 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    stat: "5",
-    title: "Clinically studied probiotic strains",
+    stat: "01",
+    title: "BioSignal Reset",
     description:
-      "L. rhamnosus GG \u00b7 L. plantarum \u00b7 B. lactis \u00b7 B. longum \u00b7 L. acidophilus. Selected for documented effects on skin inflammation, barrier integrity, and microbiome balance.",
+      "A targeted oral formulation built around clinically studied probiotic strains selected for their documented influence on inflammatory balance, barrier integrity, and microbiome stability. Supported by zinc, vitamin D3, and prebiotic fibre to assist immune modulation and probiotic activity. Designed specifically for signal resolution, not general wellness positioning.",
     color: "bg-red-bio",
   },
   {
-    stat: "3",
-    title: "Targeted micronutrients",
+    stat: "02",
+    title: "BioSignal Daily Essentials",
     description:
-      "Zinc picolinate (15mg) · Vitamin D3 (4,000 IU) · Prebiotic fibre (FOS). Each chosen for its role in skin repair, immune regulation, and probiotic colonisation.",
+      "System restoration requires nutritional sufficiency. Daily Essentials provides foundational micronutrient coverage to support immune regulation, tissue repair, nervous system function, and metabolic resilience. Formulated to complement Reset without duplication.",
     color: "bg-blue-bio",
   },
   {
-    stat: "90",
-    title: "Days the full cycle",
+    stat: "03",
+    title: "BioSignal Hydrate",
     description:
-      "90 capsules. One per day. Clinical evidence shows skin probiotic results emerge between 60 and 90 days. Reset is sized to match the biology, not to sell you a smaller bottle more often.",
+      "System change is more likely to succeed when it becomes behavioural. Hydrate introduces a daily sensory anchor to the intervention. Electrolytes and magnesium support hydration dynamics and nervous system regulation, while the ritual of preparation reinforces consistency, a key factor in biological adaptation.",
     color: "bg-green-bio",
   },
 ];
@@ -38,16 +38,13 @@ export function Product() {
           className="mb-16"
         >
           <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
-            The Product
+            The First Instrument
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
-            BioSignal Reset
+            Your BioSignal Response
           </h2>
           <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
-            The entry point to the BioSignal Method. A 90-day oral formulation designed to calm the systems that drive chronic skin conditions.
-          </p>
-          <p className="mt-4 text-sm text-foreground/40 leading-relaxed max-w-2xl">
-            Reset is not a generic probiotic. Every strain was selected for published evidence of skin-specific outcomes, not general gut health. Combined with targeted micronutrients that support barrier repair and immune modulation, it addresses all three systems in a single daily capsule.
+            Most supplement products are sold in isolation. BioSignal is designed as a coordinated 90-day system response matched to biological signals. One subscription. Three integrated instruments. Structured support across the systems that influence skin regulation.
           </p>
         </motion.div>
 
@@ -88,7 +85,7 @@ export function Product() {
           className="mt-12 pt-8 border-t border-border"
         >
           <div className="flex flex-wrap gap-3 mb-8">
-            {["Delayed-release vegetarian capsule", "Shelf-stable, no refrigeration", "Third-party tested", "Vegan", "Non-GMO", "Gluten-free", "Dairy-free"].map((badge) => (
+            {["Third-party tested", "Vegan", "Non-GMO", "Gluten-free", "Dairy-free"].map((badge) => (
               <span
                 key={badge}
                 className="text-xs text-foreground/40 border border-border px-3 py-1.5"
@@ -97,7 +94,19 @@ export function Product() {
               </span>
             ))}
           </div>
-
+          
+          <div className="mt-12 text-base text-foreground/60 leading-relaxed font-sans font-normal max-w-3xl">
+            <h3 className="text-2xl text-foreground font-medium mb-6">WHY A SYSTEM, NOT A SUPPLEMENT</h3>
+            <p className="mb-4">
+              A probiotic targets one pathway. A multivitamin supports baseline nutrition. Electrolytes influence hydration and nervous system balance. Individually, each can be useful. Combined and structured over time, they act across multiple biological pathways simultaneously.
+            </p>
+            <p className="mb-4">
+              The effect is not additive. It is systemic.
+            </p>
+            <p>
+              Most supplements are designed as isolated inputs. BioSignal is designed as a coordinated response.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

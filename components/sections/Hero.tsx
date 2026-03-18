@@ -24,7 +24,7 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-8"
           >
-            A New Framework for Skin Health
+            A NEW FRAMEWORK FOR SKINCARE.
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
