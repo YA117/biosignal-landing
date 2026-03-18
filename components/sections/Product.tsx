@@ -7,21 +7,21 @@ const features = [
     stat: "5",
     title: "Clinically studied probiotic strains",
     description:
-      "L. rhamnosus GG \u00b7 L. plantarum \u00b7 B. lactis \u00b7 B. longum \u00b7 L. acidophilus. Selected for documented effects on skin inflammation, barrier integrity, and microbiome balance.",
+      "L. rhamnosus GG \u00b7 L. plantarum \u00b7 B. lactis \u00b7 B. longum \u00b7 L. acidophilus. Selected for documented effects on the systems that produce skin inflammation, barrier disruption, and microbiome imbalance.",
     color: "bg-red-bio",
   },
   {
     stat: "3",
-    title: "Targeted micronutrients",
+    title: "Targeted micronutrient support",
     description:
-      "Zinc picolinate (15mg) · Vitamin D3 (4,000 IU) · Prebiotic fibre (FOS). Each chosen for its role in skin repair, immune regulation, and probiotic colonisation.",
+      "Zinc picolinate (15mg) \u00b7 Vitamin D3 (1,000 IU) \u00b7 Prebiotic fibre (FOS). Each chosen for its role in immune modulation, barrier repair, and probiotic colonisation.",
     color: "bg-blue-bio",
   },
   {
     stat: "90",
-    title: "Days the full cycle",
+    title: "Designed for the full cycle",
     description:
-      "90 capsules. One per day. Clinical evidence shows skin probiotic results emerge between 60 and 90 days. Reset is sized to match the biology, not to sell you a smaller bottle more often.",
+      "90 capsules. One per day. 90 days. Clinical evidence shows results from skin-specific probiotics emerge between 60 and 90 days. Reset is sized to match the biology, not to create repeat purchases before the reading is complete.",
     color: "bg-green-bio",
   },
 ];
@@ -37,6 +37,9 @@ export function Product() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
+          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-2">
+            First Instrument
+          </span>
           <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
             The Product
           </span>
@@ -44,10 +47,10 @@ export function Product() {
             BioSignal Reset
           </h2>
           <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
-            The entry point to the BioSignal Method. A 90-day oral formulation designed to calm the systems that drive chronic skin conditions.
+            The first product in the BioSignal system. A 90-day oral formulation that responds to what skin signals are telling us about the gut, barrier, and nervous system.
           </p>
           <p className="mt-4 text-sm text-foreground/40 leading-relaxed max-w-2xl">
-            Reset is not a generic probiotic. Every strain was selected for published evidence of skin-specific outcomes, not general gut health. Combined with targeted micronutrients that support barrier repair and immune modulation, it addresses all three systems in a single daily capsule.
+            Reset is not a supplement you take and hope for the best. It is a formulated response to a specific set of biological readings. Every strain was selected for published evidence of skin-relevant outcomes. Every micronutrient was chosen for its documented role in the systems that generate skin signals.
           </p>
         </motion.div>
 
@@ -97,6 +100,10 @@ export function Product() {
               </span>
             ))}
           </div>
+
+          <p className="text-sm text-foreground/50 leading-relaxed max-w-2xl">
+            90-day money-back guarantee. If the signal does not shift, you pay nothing. No return required.
+          </p>
 
         </motion.div>
       </div>

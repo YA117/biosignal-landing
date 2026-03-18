@@ -7,20 +7,23 @@ const steps = [
   {
     number: "001",
     title: "Interpret",
+    subtitle: "Map the signal to its source.",
     description:
-      "Identify which signals your skin is sending and which internal systems are generating them. Breakouts, redness, dryness, and reactivity each carry different biological meaning. The first step is pattern recognition, mapping symptoms to their systemic origins rather than treating them in isolation.",
+      "The outputs your body generates, breakouts, redness, dryness, reactivity, each carry distinct biological meaning. The first step is identifying which internal systems are producing which signals, rather than treating every symptom as the same problem.",
   },
   {
     number: "002",
     title: "Resolve",
+    subtitle: "Address the source, not the output.",
     description:
-      "Address the underlying drivers across gut, barrier, and nervous system, in the right sequence. This is where most approaches fail. They pick one system and hope for the best. BioSignal addresses all three in a structured order, because a repaired gut barrier means nothing if the nervous system is still flooding the body with inflammatory signals.",
+      "Most approaches pick one system and hope for the best. BioSignal addresses all three in a structured sequence, because calming the gut means nothing if the nervous system is still telling the body to stay inflamed.",
   },
   {
     number: "003",
     title: "Rebuild",
+    subtitle: "Restore the body\u2019s ability to regulate itself.",
     description:
-      "Restore long-term resilience so your body maintains clarity on its own. The goal is not permanent dependence on a system. It is a body that regulates itself. Skin that stays clear not because you are managing it, but because the underlying drivers have been resolved.",
+      "The goal is not a system you depend on permanently. It is a body that generates clean signals because the underlying drivers have been resolved. Clarity that sustains itself because the interpretation has been done correctly.",
   },
 ];
 
@@ -43,7 +46,7 @@ export function Method() {
             The BioSignal Method
           </h2>
           <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
-            Not a product. Not a protocol you follow blindly. A structured framework for understanding what your body is telling you and responding with precision.
+            A structured framework for reading what your body is producing and responding to it with precision. Not a product. Not a protocol. A way of interpreting biological data and acting on it.
           </p>
         </motion.div>
 
@@ -74,6 +77,9 @@ export function Method() {
                 <h3 className="text-2xl md:text-3xl font-sans font-normal text-foreground">
                   {step.title}
                 </h3>
+                {step.subtitle && (
+                  <p className="text-sm text-foreground/50 mt-1">{step.subtitle}</p>
+                )}
               </div>
               <div className="col-span-12 md:col-span-7 md:col-start-6">
                 <p className="text-sm text-foreground/50 leading-relaxed max-w-lg">

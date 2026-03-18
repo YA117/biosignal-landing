@@ -18,27 +18,36 @@ export function Hero() {
       {/* Top Content Area */}
       <div className="w-full px-6 lg:px-12">
         <div className="py-16">
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-8"
-          >
-            A New Framework for Skin Health
-          </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-sans font-normal leading-[1.05] tracking-tight text-foreground"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-sans font-normal leading-[1.05] tracking-tight text-foreground uppercase"
           >
-            Your skin is{" "}
+            Your body is{" "}
             <br className="hidden sm:block" />
-            not the problem.{" "}
+            generating data.{" "}
             <br className="hidden sm:block" />
-            It is the signal
+            BioSignal reads it
             <span className="text-blue-bio">.</span>
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-8 text-base text-foreground/50 leading-relaxed max-w-2xl"
+          >
+            Most of what your body is telling you goes unread.
+            Skin is the first instrument. Not the only one.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-4 text-sm text-foreground/40 leading-relaxed max-w-2xl"
+          >
+            BioSignal is a biological interpretation system. We decode what your body is outputting, identify the internal systems driving it, and give you a structured path to resolve it.
+          </motion.p>
         </div>
       </div>
 

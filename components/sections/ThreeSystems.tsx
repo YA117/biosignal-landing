@@ -8,21 +8,21 @@ const systems = [
     stat: "01",
     title: "Skin Barrier",
     description:
-      "The body\u2019s first line of defence, and the first to be compromised. When the barrier weakens, irritants enter, moisture escapes, and inflammation becomes self-sustaining. Most skincare products address this layer alone. BioSignal starts here but does not stop here.",
+      "The outermost layer of communication. When the barrier is compromised, it stops functioning as protection and starts functioning as an alarm. Irritants enter, moisture escapes, and inflammation becomes the body\u2019s default state. Most products try to quiet this alarm from the outside. BioSignal reads what triggered it.",
     color: "bg-red-bio",
   },
   {
     stat: "02",
-    title: "Gut Health",
+    title: "Gut",
     description:
-      "The axis between your gut and your skin is one of the most documented pathways in clinical dermatology. Intestinal permeability, microbiome imbalance, and chronic gut inflammation drive immune responses that surface as skin conditions. For many people, resolving the gut is the intervention their skin has been waiting for.",
+      "The system most often generating the signal. The connection between intestinal health and skin is one of the most documented pathways in clinical research. Microbiome imbalance, intestinal permeability, and chronic gut inflammation produce immune responses that the skin has no choice but to express. Resolve the gut, and the signal often resolves itself.",
     color: "bg-blue-bio",
   },
   {
     stat: "03",
     title: "Nervous System",
     description:
-      "Chronic stress does not just feel bad. It changes how your body allocates resources. Under sustained cortisol, the body prioritises survival over repair. Skin cell turnover slows. Inflammation accelerates. Conditions that should resolve in days persist for months. Calming the nervous system is not a lifestyle suggestion. It is a biological prerequisite for healing.",
+      "The system that determines whether repair happens at all. Under sustained stress, the body deprioritises everything that is not immediate survival. Skin cell turnover slows. Inflammatory responses accelerate. Conditions that should clear in days persist for months. The nervous system is not a lifestyle factor. It is the switch that determines whether the other two systems can do their work.",
     color: "bg-green-bio",
   },
 ];
@@ -42,11 +42,10 @@ export function ThreeSystems() {
             The Three Systems
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
-            Three systems.{" "}
-            <span className="text-foreground/40">One signal.</span>
+            Every signal has a source.
           </h2>
           <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
-            Most approaches address skin at the surface. BioSignal works at the level where skin conditions originate: three interconnected systems that determine whether your body heals or stays inflamed.
+            When your body produces a visible output, it is not one thing going wrong. It is three systems interacting. Understanding which system is driving the signal changes everything about how you respond.
           </p>
         </motion.div>
 

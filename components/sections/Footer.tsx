@@ -5,6 +5,7 @@ import Link from "next/link";
 const footerLinks = [
   { label: "Method", href: "#method" },
   { label: "Science", href: "#science" },
+  { label: "Journal", href: "/journal" },
   { label: "Contact", href: "#waitlist" },
 ];
 
@@ -20,7 +21,7 @@ export function Footer() {
               <span className="text-xl font-normal text-foreground tracking-tight" style={{ fontFamily: 'var(--font-ibm-plex)' }}>BioSignal</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-foreground/40">
-              Signal-based health, starting with skin.
+              Your body is generating data. We read it.
             </p>
           </div>
 

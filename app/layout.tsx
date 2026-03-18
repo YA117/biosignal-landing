@@ -14,11 +14,11 @@ const SITE_URL = 'https://biosignal.co.uk'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'BioSignal Your Skin Is the Signal',
+    default: 'BioSignal Your Body Is Generating Data',
     template: '%s | BioSignal',
   },
   description:
-    'A science-led framework that decodes chronic skin conditions by addressing the gut, skin barrier, and nervous system. Probiotics formulated for acne, eczema, rosacea, and reactive skin.',
+    'A biological interpretation system that decodes what your body is outputting. We read the signals your skin, gut, and nervous system generate and give you a structured path to resolve them.',
   keywords: [
     'probiotics for skin',
     'gut skin axis',
@@ -38,24 +38,24 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: SITE_URL,
     siteName: 'BioSignal',
-    title: 'BioSignal Your Skin Is the Signal',
+    title: 'BioSignal Your Body Is Generating Data',
     description:
-      'A science-led framework for acne, eczema, rosacea, and reactive skin. Addressing the gut, skin barrier, and nervous system.',
+      'A biological interpretation system that decodes what your body is outputting. Skin is the first instrument.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'BioSignal Your Skin Is the Signal',
+        alt: 'BioSignal Your Body Is Generating Data',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BioSignal Your Skin Is the Signal',
+    title: 'BioSignal Your Body Is Generating Data',
     description:
-      'A science-led framework for acne, eczema, rosacea, and reactive skin.',
+      'A biological interpretation system that decodes what your body is outputting. Skin is the first instrument.',
     images: ['/og-image.jpg'],
     creator: '@biosignal',
   },
@@ -86,7 +86,7 @@ const organisationSchema = {
   url: 'https://biosignal.co.uk',
   logo: 'https://biosignal.co.uk/logo.png',
   description:
-    'A science-led framework that decodes chronic skin conditions by addressing the gut, skin barrier, and nervous system.',
+    'A biological interpretation system that decodes what your body is outputting. We read the signals your skin, gut, and nervous system generate.',
   foundingDate: '2026',
   address: {
     '@type': 'PostalAddress',

@@ -5,6 +5,7 @@ import { ThreeSystems } from "@/components/sections/ThreeSystems";
 import { Method } from "@/components/sections/Method";
 import { Evidence } from "@/components/sections/Evidence";
 import { Product } from "@/components/sections/Product";
+import { WhatComesNext } from "@/components/sections/WhatComesNext";
 import { Waitlist } from "@/components/sections/Waitlist";
 import { Footer } from "@/components/sections/Footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Method />
         <Evidence />
         <Product />
+        <WhatComesNext />
         <Waitlist />
         <Footer />
       </main>
