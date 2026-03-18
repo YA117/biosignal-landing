@@ -9,11 +9,6 @@ const footerLinks = [
   { label: "Contact", href: "#waitlist" },
 ];
 
-const socialLinks = [
-  { label: "Instagram", href: "#" },
-  { label: "X", href: "#" },
-];
-
 export function Footer() {
   return (
     <footer className="w-full bg-background border-t border-border">
@@ -44,15 +39,12 @@ export function Footer() {
               ))}
             </div>
             <div className="flex gap-6">
-              {socialLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm text-foreground/40 transition-colors hover:text-foreground/70"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <Link href="#" className="text-sm text-foreground/40 transition-colors hover:text-foreground/70">
+                Instagram
+              </Link>
+              <Link href="#" className="text-sm text-foreground/40 transition-colors hover:text-foreground/70">
+                X
+              </Link>
             </div>
           </div>
         </div>
@@ -65,10 +57,10 @@ export function Footer() {
             &copy; {new Date().getFullYear()} BioSignal. All rights reserved. BioSignal is a brand of OakMark Trading Limited.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="text-xs text-foreground/30 hover:text-foreground/50">
+            <Link href="/privacy" className="text-xs text-foreground/30 hover:text-foreground/50">
               Privacy
             </Link>
-            <Link href="#" className="text-xs text-foreground/30 hover:text-foreground/50">
+            <Link href="/terms" className="text-xs text-foreground/30 hover:text-foreground/50">
               Terms
             </Link>
           </div>
