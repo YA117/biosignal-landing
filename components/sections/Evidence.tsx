@@ -28,9 +28,16 @@ export function Evidence() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-4">
+          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
             — The Science
           </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
+            Built on research.{" "}
+            <span className="text-foreground/40">Not trends.</span>
+          </h2>
+          <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
+            BioSignal&apos;s framework is grounded in peer-reviewed clinical research across dermatology, gastroenterology, and psychoneuroimmunology. These are not new discoveries. They are well-established connections that the skincare industry has largely ignored.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
@@ -52,6 +59,16 @@ export function Evidence() {
             </motion.div>
           ))}
         </div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-12 text-sm text-foreground/40 leading-relaxed max-w-2xl"
+        >
+          Every element of the BioSignal framework is informed by clinical evidence. Where the research is strong, we build on it. Where it is emerging, we say so.
+        </motion.p>
       </div>
     </section>
   );

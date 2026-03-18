@@ -2,20 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const stats = [
-  {
-    value: "70%",
-    text: "of the immune system resides in the gut, making intestinal health a direct lever for inflammatory skin conditions.",
-  },
-  {
-    value: "40%",
-    text: "reduction in skin barrier recovery is observed under chronic psychological stress, according to published dermatological research.",
-  },
-  {
-    value: "34",
-    text: "peer-reviewed studies have documented the gut-skin axis as a significant factor in acne, eczema, rosacea, and psoriasis outcomes.",
-  },
-];
+import Link from "next/link";
 
 /* Horizontal color bars matching bio4 exactly */
 const bars = [
@@ -33,6 +20,14 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
           {/* Left: Massive Heading */}
           <div className="border-r border-border py-16 pr-8 lg:pr-16">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-8"
+            >
+              A New Framework for Skin Health
+            </motion.span>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,24 +43,31 @@ export function Hero() {
             </motion.h1>
           </div>
 
-          {/* Right: Stats List */}
+          {/* Right: Description + CTA */}
           <div className="py-16 pl-8 lg:pl-16 flex flex-col justify-center">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 + i * 0.15 }}
-                className={`flex items-start gap-8 py-6 ${i < stats.length - 1 ? "border-b border-border" : ""}`}
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-base text-foreground/60 leading-relaxed max-w-md mb-10"
+            >
+              BioSignal is a structured system that decodes what your skin is telling you and resolves it at the source.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.45 }}
+            >
+              <Link
+                href="#waitlist"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background text-sm font-medium hover:bg-foreground/90 transition-colors"
               >
-                <span className="text-2xl md:text-3xl font-sans font-normal text-foreground whitespace-nowrap min-w-[80px]">
-                  {stat.value}
-                </span>
-                <p className="text-sm text-foreground/60 leading-relaxed max-w-md">
-                  {stat.text}
-                </p>
-              </motion.div>
-            ))}
+                Join the Waitlist
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>
