@@ -18,7 +18,7 @@ export function Navbar() {
     <nav className="fixed left-0 right-0 top-0 z-50 bg-background border-b border-border">
       <div className="mx-auto flex h-20 w-full items-center justify-between px-6 lg:px-12">
         <Link href="/" className="group">
-          <span className="text-xl font-normal text-foreground tracking-tight" style={{ fontFamily: 'var(--font-ibm-plex)' }}>biosignal</span>
+          <span className="text-xl font-normal text-foreground tracking-tight" style={{ fontFamily: 'var(--font-ibm-plex)' }}>BioSignal</span>
         </Link>
 
         {/* Desktop Links */}

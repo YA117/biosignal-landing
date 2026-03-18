@@ -18,7 +18,7 @@ export function Footer() {
           {/* Brand */}
           <div className="max-w-xs">
             <Link href="/">
-              <span className="text-xl font-normal text-foreground tracking-tight" style={{ fontFamily: 'var(--font-ibm-plex)' }}>biosignal</span>
+              <span className="text-xl font-normal text-foreground tracking-tight" style={{ fontFamily: 'var(--font-ibm-plex)' }}>BioSignal</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-foreground/40">
               Signal-based health, starting with skin.
@@ -57,10 +57,10 @@ export function Footer() {
             &copy; {new Date().getFullYear()} BioSignal. All rights reserved. BioSignal is a brand of OakMark Trading Limited.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="text-xs text-foreground/30 hover:text-foreground/50">
+            <Link href="/privacy" className="text-xs text-foreground/30 hover:text-foreground/50">
               Privacy
             </Link>
-            <Link href="#" className="text-xs text-foreground/30 hover:text-foreground/50">
+            <Link href="/terms" className="text-xs text-foreground/30 hover:text-foreground/50">
               Terms
             </Link>
           </div>
