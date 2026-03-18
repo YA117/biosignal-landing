@@ -39,7 +39,7 @@ export function ThreeSystems() {
           className="mb-16"
         >
           <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
-            — The Three Systems
+            The Three Systems
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
             Three systems.{" "}
@@ -83,20 +83,32 @@ export function ThreeSystems() {
               {/* Abstract visualization - Motion based */}
               <div className="mt-8">
                 <MotionGrid 
-                  rows={10}
+                  rows={7}
                   cols={6}
-                  bars={[
-                    { row: 1, width: "w-[40%]", left: "left-[10%]", color: system.color, delay: 0.1 },
-                    { row: 2, width: "w-[60%]", left: "left-0", color: system.color, delay: 0.2 },
-                    { row: 3, width: "w-[30%]", left: "left-[45%]", color: system.color, delay: 0.05 },
-                    { row: 4, width: "w-[50%]", left: "left-[20%]", color: system.color, delay: 0.3 },
-                    { row: 5, width: "w-[75%]", left: "left-[5%]", color: system.color, delay: 0.15 },
-                    { row: 6, width: "w-[25%]", left: "left-[60%]", color: system.color, delay: 0.4 },
-                    { row: 7, width: "w-[45%]", left: "left-[15%]", color: system.color, delay: 0.1 },
-                    { row: 8, width: "w-[35%]", left: "left-[40%]", color: system.color, delay: 0.25 },
-                    { row: 9, width: "w-[65%]", left: "left-0", color: system.color, delay: 0.05 },
-                    { row: 10, width: "w-[20%]", left: "left-[75%]", color: system.color, delay: 0.35 },
-                  ]}
+                  unboxed={true}
+                  bars={
+                    i === 0 ? [
+                      // 4 lines: 3 from right, 1 from left
+                      { row: 1, width: "w-[40%]", right: "right-0", origin: "right", color: system.color, delay: 0.1 },
+                      { row: 3, width: "w-[30%]", right: "right-[15%]", origin: "right", color: system.color, delay: 0.3 },
+                      { row: 5, width: "w-[50%]", left: "left-0", origin: "left", color: system.color, delay: 0.2 },
+                      { row: 6, width: "w-[65%]", right: "right-[5%]", origin: "right", color: system.color, delay: 0.4 },
+                    ] : i === 1 ? [
+                      // 5 lines: 3 from left, 2 from right
+                      { row: 1, width: "w-[45%]", left: "left-0", origin: "left", color: system.color, delay: 0.2 },
+                      { row: 3, width: "w-[35%]", left: "left-[10%]", origin: "left", color: system.color, delay: 0.4 },
+                      { row: 4, width: "w-[55%]", right: "right-0", origin: "right", color: system.color, delay: 0.1 },
+                      { row: 6, width: "w-[25%]", left: "left-[5%]", origin: "left", color: system.color, delay: 0.5 },
+                      { row: 7, width: "w-[60%]", right: "right-[15%]", origin: "right", color: system.color, delay: 0.3 },
+                    ] : [
+                      // 4.5 lines: 3 from right, 1.5 from left (we'll make 2 from left, 1 very short)
+                      { row: 1, width: "w-[50%]", right: "right-0", origin: "right", color: system.color, delay: 0.1 },
+                      { row: 2, width: "w-[15%]", left: "left-0", origin: "left", color: system.color, delay: 0.3 }, // half line
+                      { row: 4, width: "w-[40%]", right: "right-[10%]", origin: "right", color: system.color, delay: 0.2 },
+                      { row: 6, width: "w-[35%]", left: "left-[5%]", origin: "left", color: system.color, delay: 0.4 },
+                      { row: 7, width: "w-[65%]", right: "right-[5%]", origin: "right", color: system.color, delay: 0.5 },
+                    ]
+                  }
                 />
               </div>
 

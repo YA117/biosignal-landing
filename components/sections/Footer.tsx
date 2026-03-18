@@ -53,7 +53,7 @@ export function Footer() {
       <div className="border-t border-border px-6 lg:px-12 py-4">
         <div className="flex flex-col items-center justify-between gap-2 sm:flex-row">
           <p className="text-xs text-foreground/30">
-            &copy; {new Date().getFullYear()} BioSignal. All rights reserved. BioSignal is a brand of OakMark Trading Limited.
+            &copy; {new Date().getFullYear()} BioSignal. All rights reserved. BioSignal is a brand of OAKMARK Trading Limited. Registered in England & Wales. Company No. 17073095.
           </p>
           <div className="flex gap-4">
             <Link href="/privacy" className="text-xs text-foreground/30 hover:text-foreground/50">

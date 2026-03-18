@@ -13,9 +13,11 @@ export function Reframe() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-8">
-              — The Reframe
-            </span>
+            <div className="flex w-full sm:w-1/3">
+              <span className="font-mono text-xs tracking-widest uppercase text-[#c4733b]">
+                The Reframe
+              </span>
+            </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground mb-8">
               You have tried the creams. The serums. The elimination diets.{" "}
               <span className="text-foreground/40">

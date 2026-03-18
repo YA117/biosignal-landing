@@ -6,18 +6,25 @@ interface MotionGridProps {
   className?: string;
   rows?: number;
   cols?: number;
+  unboxed?: boolean;
   bars?: Array<{
     row: number;
     width: string;
-    left: string;
+    left?: string;
+    right?: string;
+    origin?: "left" | "right";
     color: string;
     delay?: number;
   }>;
 }
 
-export function MotionGrid({ className = "", rows = 4, cols = 4, bars = [] }: MotionGridProps) {
+export function MotionGrid({ className = "", rows = 4, cols = 4, unboxed = false, bars = [] }: MotionGridProps) {
+  const containerClasses = unboxed 
+    ? `relative ${className}` 
+    : `relative border border-border/60 bg-surface/30 overflow-hidden ${className}`;
+
   return (
-    <div className={`relative border border-border/60 bg-surface/30 overflow-hidden ${className}`}>
+    <div className={containerClasses}>
       {Array.from({ length: rows }).map((_, rowIndex) => (
         <div key={rowIndex} className="relative h-[24px] md:h-[32px] border-b border-border/60">
           {/* Vertical dividers */}
@@ -34,7 +41,7 @@ export function MotionGrid({ className = "", rows = 4, cols = 4, bars = [] }: Mo
             .map((bar, bi) => (
               <motion.div
                 key={bi}
-                initial={{ scaleX: 0, opacity: 0, x: -20 }}
+                initial={{ scaleX: 0, opacity: 0, x: bar.origin === "right" ? 20 : -20 }}
                 whileInView={{ 
                   scaleX: 1, 
                   opacity: 0.8,
@@ -46,7 +53,7 @@ export function MotionGrid({ className = "", rows = 4, cols = 4, bars = [] }: Mo
                   delay: (bar.delay ?? 0.2) + rowIndex * 0.05, 
                   ease: [0.16, 1, 0.3, 1] // Custom quintic ease-out for more "life"
                 }}
-                className={`absolute top-[25%] h-[50%] ${bar.width} ${bar.left} ${bar.color} origin-left`}
+                className={`absolute top-[25%] h-[50%] ${bar.width} ${bar.left || ""} ${bar.right || ""} ${bar.color} origin-${bar.origin || "left"}`}
               >
                 {/* Subtle pulse effect */}
                 <motion.div 

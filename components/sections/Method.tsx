@@ -36,8 +36,8 @@ export function Method() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
-            — The Method
+          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6 px-6 lg:px-12">
+            The Method
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
             The BioSignal Method
@@ -47,21 +47,26 @@ export function Method() {
           </p>
         </motion.div>
 
-        {/* Numbered List — bio1 style */}
+        {/* Numbered List bio1 style */}
         <div className="mb-16">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`grid grid-cols-12 gap-4 py-10 ${
+              initial={{ opacity: 0, x: -30, scale: 0.98 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ 
+                duration: 0.7, 
+                delay: index * 0.15,
+                type: "spring", stiffness: 50, damping: 15
+              }}
+              whileHover={{ x: 10, transition: { duration: 0.3 } }}
+              className={`grid grid-cols-12 gap-4 py-12 group cursor-default ${
                 index < steps.length - 1 ? "border-b border-border" : ""
               }`}
             >
-              <div className="col-span-2 md:col-span-1">
-                <span className="font-mono text-sm text-foreground/30">
+              <div className="col-span-2 md:col-span-1 border-l-2 border-transparent group-hover:border-foreground transition-colors duration-300 pl-4 -ml-4">
+                <span className="font-mono text-xs md:text-sm text-foreground/30 group-hover:text-foreground/70 transition-colors">
                   {step.number}
                 </span>
               </div>
@@ -79,52 +84,6 @@ export function Method() {
           ))}
         </div>
 
-        {/* Carousel area — bio1 network diagrams */}
-        <div className="overflow-x-auto pb-8 -mx-6 px-6 lg:-mx-12 lg:px-12">
-          <div className="flex gap-6 min-w-max">
-            {["red-bio", "blue-bio", "green-bio"].map((color, i) => (
-              <motion.div
-                key={color}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                className="w-[360px] md:w-[440px] h-[280px] md:h-[320px] bg-surface rounded-sm border border-border relative overflow-hidden"
-              >
-                {/* Motion Grid Signal Flow */}
-                <div className="p-8 h-full flex flex-col justify-center">
-                  <MotionGrid 
-                    rows={8}
-                    cols={6}
-                    bars={[
-                      { row: 1, width: "w-[30%]", left: "left-[10%]", color: `bg-${color}`, delay: 0.1 },
-                      { row: 2, width: "w-[50%]", left: "left-[40%]", color: `bg-${color}`, delay: 0.2 },
-                      { row: 3, width: "w-[20%]", left: "left-0", color: `bg-${color}`, delay: 0.3 },
-                      { row: 4, width: "w-[40%]", left: "left-[55%]", color: `bg-${color}`, delay: 0.4 },
-                      { row: 5, width: "w-[60%]", left: "left-[15%]", color: `bg-${color}`, delay: 0.5 },
-                      { row: 6, width: "w-[25%]", left: "left-[70%]", color: `bg-${color}`, delay: 0.6 },
-                      { row: 7, width: "w-[35%]", left: "left-[5%]", color: `bg-${color}`, delay: 0.7 },
-                      { row: 8, width: "w-[45%]", left: "left-[30%]", color: `bg-${color}`, delay: 0.8 },
-                    ]}
-                  />
-                  <div className="mt-6 flex justify-between items-end">
-                    <span className={`text-[10px] font-mono uppercase tracking-tighter text-${color} opacity-60`}>Signal: {color.split('-')[0]}</span>
-                    <div className={`w-2 h-2 rounded-full bg-${color} animate-pulse`} />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Carousel Controls */}
-        <div className="flex items-center justify-between mt-6">
-          <span className="font-mono text-xs text-foreground/30">01/05</span>
-          <div className="flex gap-4">
-            <button className="text-foreground/40 hover:text-foreground transition-colors">←</button>
-            <button className="text-foreground/40 hover:text-foreground transition-colors">→</button>
-          </div>
-        </div>
       </div>
     </section>
   );

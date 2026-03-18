@@ -1,8 +1,21 @@
 import Link from "next/link";
 
-export const metadata = {
-  title: "The BioSignal Method — Coming Soon",
-};
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'The BioSignal Method',
+  description:
+    'A structured three-phase framework: Interpret, Resolve, Rebuild that addresses chronic skin conditions through the gut, skin barrier, and nervous system.',
+  openGraph: {
+    title: 'The BioSignal Method',
+    description:
+      'Interpret, Resolve, Rebuild. A structured framework for lasting skin clarity.',
+    url: '/method',
+  },
+  alternates: {
+    canonical: '/method',
+  },
+}
 
 export default function MethodPage() {
   return (

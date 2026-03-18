@@ -30,13 +30,13 @@ export function Evidence() {
           className="mb-16"
         >
           <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
-            — The Science
+            The Science
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
             Built on research.{" "}
             <span className="text-foreground/40">Not trends.</span>
           </h2>
-          <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
+          <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl text-balance">
             BioSignal&apos;s framework is grounded in peer-reviewed clinical research across dermatology, gastroenterology, and psychoneuroimmunology. These are not new discoveries. They are well-established connections that the skincare industry has largely ignored.
           </p>
         </motion.div>
@@ -59,24 +59,19 @@ export function Evidence() {
               </p>
               <div className="md:pr-12">
                 <MotionGrid 
-                  rows={2}
+                  rows={2} // Kept rows=2 to maintain identical vertical spacing layout from before
                   cols={4}
-                  bars={[
-                    { 
-                      row: 1, 
-                      width: item.stat.includes("%") ? `w-[${item.stat}]` : "w-[60%]", 
-                      left: "left-0", 
-                      color: i === 0 ? "bg-blue-bio" : i === 1 ? "bg-red-bio" : "bg-green-bio",
-                      delay: 0.2 
-                    },
-                    { 
-                      row: 2, 
-                      width: "w-[20%]", 
-                      left: "left-[70%]", 
-                      color: "bg-surface-dark", 
-                      delay: 0.4 
-                    },
-                  ]}
+                  unboxed={true}
+                  bars={
+                    i === 0 ? [
+                      { row: 1, width: "w-[55%]", left: "left-0", color: "bg-blue-bio", delay: 0.2 },
+                      { row: 2, width: "w-[25%]", left: "left-[35%]", color: "bg-blue-bio", delay: 0.35 } // 1/4 line added
+                    ] : i === 1 ? [
+                      { row: 2, width: "w-[25%]", left: "left-[75%]", color: "bg-red-bio", delay: 0.35 } // Bottom row, 3/4 from left
+                    ] : [
+                      { row: 1, width: "w-[45%]", left: "left-[5%]", color: "bg-green-bio", delay: 0.5 }
+                    ]
+                  }
                 />
               </div>
             </motion.div>

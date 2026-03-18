@@ -43,10 +43,10 @@ export function Hero() {
       </div>
 
 
-      {/* Horizontal Bar Data Visualization — bio4 style */}
+      {/* Horizontal Bar Data Visualization bio4 style */}
       <div className="w-full mt-4">
         {/* Grid rows of thin grey lines with colored bars */}
-        {Array.from({ length: 8 }).map((_, rowIndex) => (
+        {Array.from({ length: 5 }).map((_, rowIndex) => (
           <div key={rowIndex} className="relative h-[48px] border-t border-border/60">
             {/* Vertical dividers */}
             <div className="absolute inset-0 flex">

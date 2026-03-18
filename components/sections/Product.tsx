@@ -19,7 +19,7 @@ const features = [
   },
   {
     stat: "90",
-    title: "Days — the full cycle",
+    title: "Days the full cycle",
     description:
       "90 capsules. One per day. Clinical evidence shows skin probiotic results emerge between 60 and 90 days. Reset is sized to match the biology, not to sell you a smaller bottle more often.",
     color: "bg-green-bio",
@@ -38,7 +38,7 @@ export function Product() {
           className="mb-16"
         >
           <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
-            — The Product
+            The Product
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
             BioSignal Reset
