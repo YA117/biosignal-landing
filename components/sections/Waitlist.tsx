@@ -25,6 +25,9 @@ export function Waitlist() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
+            <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-8">
+              — Early Access
+            </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground mb-6">
               Understand the signal
               <span className="text-blue-bio">.</span>

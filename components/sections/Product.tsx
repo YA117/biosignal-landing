@@ -2,29 +2,34 @@
 
 import { motion } from "framer-motion";
 
-const probiotics = [
-  "L. rhamnosus GG",
-  "L. plantarum",
-  "B. lactis",
-  "B. longum",
-  "L. acidophilus",
-];
-
-const badges = [
-  "Delayed-release vegetarian capsule",
-  "Shelf-stable, no refrigeration",
-  "Third-party tested",
-  "Vegan",
-  "Non-GMO",
-  "Gluten-free",
-  "Dairy-free",
+const features = [
+  {
+    stat: "5",
+    title: "Clinically studied probiotic strains",
+    description:
+      "L. rhamnosus GG \u00b7 L. plantarum \u00b7 B. lactis \u00b7 B. longum \u00b7 L. acidophilus. Selected for documented effects on skin inflammation, barrier integrity, and microbiome balance.",
+    color: "bg-red-bio",
+  },
+  {
+    stat: "3",
+    title: "Targeted micronutrients",
+    description:
+      "Zinc picolinate (15mg) \u00b7 Vitamin D3 (1,000 IU) \u00b7 Prebiotic fibre (FOS). Each chosen for its role in skin repair, immune regulation, and probiotic colonisation.",
+    color: "bg-blue-bio",
+  },
+  {
+    stat: "90",
+    title: "Days — the full cycle",
+    description:
+      "90 capsules. One per day. Clinical evidence shows skin probiotic results emerge between 60 and 90 days. Reset is sized to match the biology, not to sell you a smaller bottle more often.",
+    color: "bg-green-bio",
+  },
 ];
 
 export function Product() {
   return (
     <section className="bg-background border-t border-border">
       <div className="w-full px-6 lg:px-12 py-24 md:py-32">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,111 +37,56 @@ export function Product() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-6">
-            — Introducing
+          <span className="block font-mono text-xs tracking-widest uppercase text-foreground/40 mb-4">
+            — The Product
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-normal leading-[1.15] tracking-tight text-foreground">
-            BioSignal Reset
-          </h2>
-          <p className="mt-6 text-base text-foreground/50 leading-relaxed max-w-2xl">
-            The entry point to the BioSignal Method. A 90-day oral formulation designed to calm the systems that drive chronic skin conditions.
-          </p>
-          <p className="mt-4 text-sm text-foreground/40 leading-relaxed max-w-2xl">
-            Reset is not a generic probiotic. Every strain was selected for published evidence of skin-specific outcomes, not general gut health. Combined with targeted micronutrients that support barrier repair and immune modulation, it addresses all three systems in a single daily capsule.
-          </p>
         </motion.div>
 
-        {/* Product Details Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-          {/* Probiotics */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="py-8 md:border-r border-border md:pr-10"
-          >
-            <h3 className="text-lg font-sans font-normal text-foreground mb-3">
-              Five clinically studied probiotic strains
-            </h3>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {probiotics.map((strain) => (
-                <span
-                  key={strain}
-                  className="font-mono text-xs text-foreground/50 bg-surface px-2 py-1 border border-border"
-                >
-                  {strain}
-                </span>
-              ))}
-            </div>
-            <p className="text-sm text-foreground/50 leading-relaxed">
-              Selected for documented effects on skin inflammation, barrier integrity, and microbiome balance.
-            </p>
-          </motion.div>
+          {features.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className={`p-8 lg:p-10 ${i < features.length - 1 ? "border-r border-border" : ""}`}
+            >
+              {/* Stat */}
+              <h3 className="text-4xl md:text-5xl font-sans font-normal text-foreground mb-4">
+                {item.stat}
+              </h3>
 
-          {/* Micronutrients */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="py-8 md:border-r border-border md:pl-10 md:pr-10 border-t md:border-t-0"
-          >
-            <h3 className="text-lg font-sans font-normal text-foreground mb-3">
-              Targeted micronutrient support
-            </h3>
-            <div className="space-y-2 mb-4">
-              <span className="block font-mono text-xs text-foreground/50">Zinc picolinate (15mg)</span>
-              <span className="block font-mono text-xs text-foreground/50">Vitamin D3 (1,000 IU)</span>
-              <span className="block font-mono text-xs text-foreground/50">Prebiotic fibre (FOS)</span>
-            </div>
-            <p className="text-sm text-foreground/50 leading-relaxed">
-              Each chosen for its role in skin repair, immune regulation, and probiotic colonisation.
-            </p>
-          </motion.div>
+              {/* Title */}
+              <p className="text-sm font-medium text-foreground/70 mb-3">
+                {item.title}
+              </p>
 
-          {/* Full Cycle */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="py-8 md:pl-10 border-t md:border-t-0"
-          >
-            <h3 className="text-lg font-sans font-normal text-foreground mb-3">
-              Designed for the full cycle
-            </h3>
-            <p className="font-mono text-xs text-foreground/50 mb-4">
-              90 capsules · One per day · 90 days
-            </p>
-            <p className="text-sm text-foreground/50 leading-relaxed">
-              Clinical evidence shows skin probiotic results emerge between 60 and 90 days. Reset is sized to match the biology, not to sell you a smaller bottle more often.
-            </p>
-          </motion.div>
+              {/* Description */}
+              <p className="text-sm text-foreground/50 leading-relaxed mb-6">
+                {item.description}
+              </p>
+
+              {/* Abstract visualization placeholder */}
+              <div className="mt-8 h-48 md:h-64 bg-surface rounded-sm overflow-hidden relative">
+                <div className="absolute inset-0 grid grid-cols-8 grid-rows-8">
+                  {Array.from({ length: 64 }).map((_, j) => (
+                    <div
+                      key={j}
+                      className={`border border-border/30 ${
+                        Math.random() > 0.85
+                          ? item.color + " opacity-60"
+                          : Math.random() > 0.9
+                          ? "bg-surface-dark"
+                          : ""
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-
-        {/* Badges & Guarantee */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 pt-8 border-t border-border"
-        >
-          <div className="flex flex-wrap gap-3 mb-8">
-            {badges.map((badge) => (
-              <span
-                key={badge}
-                className="text-xs text-foreground/40 border border-border px-3 py-1.5"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
-          <p className="text-sm text-foreground/60 leading-relaxed">
-            90-day money-back guarantee. If your skin does not improve, you pay nothing. No return required.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

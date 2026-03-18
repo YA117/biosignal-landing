@@ -9,11 +9,6 @@ const footerLinks = [
   { label: "Contact", href: "#waitlist" },
 ];
 
-const socialLinks = [
-  { label: "Instagram", href: "#" },
-  { label: "X", href: "#" },
-];
-
 export function Footer() {
   return (
     <footer className="w-full bg-background border-t border-border">
@@ -23,7 +18,7 @@ export function Footer() {
           {/* Brand */}
           <div className="max-w-xs">
             <Link href="/">
-              <span className="text-xl font-normal text-foreground tracking-tight" style={{ fontFamily: 'var(--font-ibm-plex)' }}>BioSignal</span>
+              <span className="text-xl font-normal text-foreground tracking-tight" style={{ fontFamily: 'var(--font-ibm-plex)' }}>biosignal</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-foreground/40">
               Signal-based health, starting with skin.
@@ -44,15 +39,12 @@ export function Footer() {
               ))}
             </div>
             <div className="flex gap-6">
-              {socialLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm text-foreground/40 transition-colors hover:text-foreground/70"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <Link href="#" className="text-sm text-foreground/40 transition-colors hover:text-foreground/70">
+                Instagram
+              </Link>
+              <Link href="#" className="text-sm text-foreground/40 transition-colors hover:text-foreground/70">
+                X
+              </Link>
             </div>
           </div>
         </div>
